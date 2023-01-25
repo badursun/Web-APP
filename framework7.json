@@ -1,0 +1,35 @@
+{
+  "cwd": "/Users/Shared/DEPO/Dropbox/wwwroot/Web-APP",
+  "type": [
+    "cordova",
+    "pwa"
+  ],
+  "name": "WebAPP",
+  "framework": "core",
+  "template": "tabs",
+  "bundler": "vite",
+  "cssPreProcessor": "less",
+  "theming": {
+    "customColor": true,
+    "color": "#7f9338",
+    "darkTheme": false,
+    "iconFonts": false,
+    "fillBars": true
+  },
+  "customBuild": false,
+  "pkg": "io.framework7.myapp",
+  "cordova": {
+    "folder": "cordova",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "plugins": [
+      "cordova-plugin-statusbar",
+      "cordova-plugin-keyboard",
+      "cordova-plugin-splashscreen",
+      "cordova-plugin-inappbrowser",
+      "cordova-plugin-safariviewcontroller"
+    ]
+  }
+}

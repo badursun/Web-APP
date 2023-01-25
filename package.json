@@ -1,0 +1,42 @@
+{
+  "name": "webapp",
+  "private": true,
+  "version": "1.0.0",
+  "description": "WebAPP",
+  "repository": "",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "cross-env NODE_ENV=development vite",
+    "build": "cross-env NODE_ENV=production vite build && npx workbox generateSW workbox-config.js",
+    "build-cordova": "cross-env TARGET=cordova cross-env NODE_ENV=production vite build && node ./build/build-cordova.js && cd cordova && cordova build",
+    "build-cordova-ios": "cross-env TARGET=cordova cross-env NODE_ENV=production vite build && node ./build/build-cordova.js && cd cordova && cordova build ios",
+    "cordova-ios": "cross-env TARGET=cordova cross-env NODE_ENV=production vite build && node ./build/build-cordova.js && cd cordova && cordova run ios",
+    "build-cordova-android": "cross-env TARGET=cordova cross-env NODE_ENV=production vite build && node ./build/build-cordova.js && cd cordova && cordova build android",
+    "cordova-android": "cross-env TARGET=cordova cross-env NODE_ENV=production vite build && node ./build/build-cordova.js && cd cordova && cordova run android"
+  },
+  "browserslist": [
+    "Android >= 7",
+    "IOS >= 11",
+    "Safari >= 11",
+    "Chrome >= 49",
+    "Firefox >= 31",
+    "Samsung >= 5"
+  ],
+  "dependencies": {
+    "dom7": "^3.0.0",
+    "framework7": "^6.3.16",
+    "skeleton-elements": "^3.5.0",
+    "swiper": "^6.8.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "less": "^4.1.2",
+    "postcss-preset-env": "^6.7.1",
+    "rollup": "^2.68.0",
+    "rollup-plugin-framework7": "^1.2.1",
+    "vite": "^2.8.4",
+    "vite-plugin-html": "^3.0.6",
+    "workbox-cli": "^6.5.0"
+  }
+}
